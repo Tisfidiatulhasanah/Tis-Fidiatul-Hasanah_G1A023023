@@ -53,6 +53,28 @@ Selain itu, Java adalah salah satu bahasa pemrograman yang paling banyak digunak
 **Gambar 1.1**
 
 
+**Code:**
+
+public class task1{
+    
+    public static void main(String[] args) {
+
+        String name = "Tis Fidiatul Hasanah";
+        String NPM = "G1A023023";
+        System.out.println("Nama : " + name);
+        System.out.println("NPM : " + NPM);
+        System.out.println("==========");
+        for (int i = 0 ; i<=100 ; i++){
+            if (i>= 10){
+                System.out.println(name);
+            }
+            else{
+                System.out.println(i);
+            }
+        }
+    }
+}
+
 Berikut adalah penjelasan tentang fungsi dan cara kerja setiap baris dari Gambar 1.1 di atas:
 
 1. public class task1 {
@@ -107,6 +129,39 @@ Kode ini mencetak nama dan NPM ke layar, kemudian mencetak "x:==================
 **Gambar 1.2**
 
 
+**Code:**
+
+
+import java.util.Scanner;
+
+public class task2{
+
+    public static void main(String[] args){
+    
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Masukan sebuah bilangan bulat");
+        
+        int bilangan = input.nextInt();
+        
+        input.close();
+
+        if (bilangan % 2 == 0){
+            System.out.println("Bilangan " + bilangan + " adalah bilangan genap.");
+        }else{
+            System.out.println("Bilangan " + bilangan + " adalah bilangan ganjil.");
+        }
+        System.out.println("Menggunakan perulangan while untuk menghitung dari 1 hingga " + bilangan);
+
+
+        int i = 1;
+        while (i <= bilangan){
+            System.out.println(i); i++;
+        }
+    }
+}
+
+
 Kode yang ada pada gambar 1.2 adalah program Java sederhana yang meminta pengguna untuk memasukkan bilangan bulat, kemudian menentukan apakah bilangan tersebut genap atau ganjil, dan terakhir, melakukan perulangan while untuk menghitung dari 1 hingga bilangan yang dimasukkan :
 
 1. `import java.util.Scanner;`: Ini adalah baris yang mengimpor kelas `Scanner` dari pustaka utilitas Java, yang digunakan untuk membaca input dari pengguna.
@@ -153,6 +208,132 @@ Program ini memberikan tiga informasi kepada pengguna: apakah bilangan yang dima
 
 **Gambar 1.6**
 
+
+**Code:**
+
+
+import java.util.Scanner;
+
+public class zodiak{
+
+    public static void main(String[] args){
+    
+       Scanner SC = new Scanner(System.in);
+       
+       System.out.println("masukan tanggal lahir kamu!");
+       
+       int tgl= SC.nextInt();
+       
+       System.out.println("kamu lahir bulan berapa?");
+       
+       int bln= SC.nextInt();
+       
+       SC.close();
+
+        String zodiac = "";
+
+        switch (bln){
+            case 1:
+            if ((tgl >=21) && (tgl  <=31)){
+                zodiac="aquarius";
+            }else{
+                zodiac="capricorn";
+            }
+            break;
+
+            case 2:
+            if ((tgl >=20) && (tgl  <=29)){
+                zodiac="pisces";
+            }else{
+                zodiac="aquarius";
+            }
+            break;
+
+            case 3:
+            if ((tgl >=21) && (tgl  <=31)){
+                zodiac="aries";
+            }else{
+                zodiac="pisces";
+            }
+            break;
+
+            case 4:
+            if ((tgl >=19) && (tgl  <=30)){
+                zodiac="taurus";
+            }else{
+                zodiac="aries";
+            }
+            break;
+
+            case 5:
+            if ((tgl >=19) && (tgl  <=31)){
+                zodiac="belum ada";
+            }else{
+                zodiac="taurus";
+            }
+            break;
+
+            case 6:
+            if ((tgl >=22) && (tgl  <=30)){
+                zodiac="cancer";
+            }else{
+                zodiac="belum ada";
+            }
+            break;
+
+            case 7:
+            if ((tgl >=22) && (tgl  <=31)){
+                zodiac="leo";
+            }else{
+                zodiac="cancer";
+            }
+            break;
+
+            case 8:
+            if ((tgl >=23) && (tgl  <=31)){
+                zodiac="virgo";
+            }else{
+                zodiac="leo";
+            }
+            break;
+
+            case 9:
+            if ((tgl >=22) && (tgl  <=30)){
+                zodiac="libra";
+            }else{
+                zodiac="virga";
+            }
+            break;
+
+            case 10:
+            if ((tgl >=22) && (tgl  <=31)){
+                zodiac="scorpio";
+            }else{
+                zodiac="libra";
+            }
+            break;
+
+            case 11:
+            if ((tgl >=21) && (tgl  <=30)){
+                zodiac="sagitarius";
+            }else{
+                zodiac="scorpio";
+            }
+            break;
+
+            case 12:
+            if ((tgl >=21) && (tgl  <=31)){
+                zodiac="capricorn";
+            }else{
+                zodiac="aquarius";
+            }
+            break;
+        }
+        System.out.println("Zodiak anda adalah: " + zodiac);
+    }
+}
+
+
 Kode yang ada pada Gambar 1.3, 1.4, 1.5, 1.6 diatas adalah program Java yang meminta pengguna memasukkan tanggal lahir (hari dan bulan) dan kemudian menentukan zodiak berdasarkan tanggal tersebut. Berikut adalah penjelasan langkah demi langkah:
 
 1. `import java.util.Scanner;`: Ini adalah baris yang mengimpor kelas `Scanner` dari pustaka utilitas Java untuk membaca input dari pengguna.
@@ -188,6 +369,23 @@ Program ini memberikan informasi zodiak berdasarkan tanggal lahir yang dimasukka
 
 
 **Gambar 1.7**
+
+
+**Code:**
+
+
+public class Array {
+
+    public static void main(String[] args) {
+
+        String [] novel = {"laskar pelangi", "pulang", "bumi manusia", "selena", "cantik itu luka"};
+        
+        for (int i=0 ; i<novel.length; i++){
+            System.out.println(novel[i]);
+        }
+    }
+}
+
 
 Kode yang ada pada Gambar 1.7 diatas adalah program Java yang menggunakan array untuk menyimpan daftar judul novel dan kemudian mencetak judul-judul novel tersebut ke layar. Berikut adalah penjelasan langkah demi langkah:
 
